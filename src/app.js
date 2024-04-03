@@ -1,9 +1,12 @@
 const express = require('express');
 const app = express();
 const cors = require('cors');
+const bodyParser = require('body-parser')
 
-app.use(express.urlencoded({ extended: false }));
+//app.use(express.urlencoded({ extended: false }));
 app.use(cors());
+app.use(bodyParser.json());
+
 
 //Requerimos la ruta.
 const urlRouter = require('./routes/urlRouter');
