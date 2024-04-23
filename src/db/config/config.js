@@ -1,22 +1,22 @@
 module.exports = {
   "development": {
-    "username": 'root' || process.env.DB_USER,
-    "password": null || process.env.DB_PASSWORD,
-    "database": 'urlShortener' || process.env.DB_NAME,
-    "host": 'localhost' || process.env.DB_HOST,
+    "username": process.env.DB_USERNAME,
+    "password": process.env.DB_PASSWORD,
+    "database": process.env.DATABASE,
+    "host": process.env.DB_HOST,
     "dialect": "mysql"
   },
   "test": {
-    "username": process.env.DB_USER,
+    "username": process.env.DB_USERNAME,
     "password": process.env.DB_PASSWORD,
-    "database": process.env.DB_NAME,
+    "database": process.env.DATABASE,
     "host": process.env.DB_HOST,
     "dialect": "mysql"
   },
   "production": {
-    "username": process.env.DB_USER,
+    "username": process.env.DB_USERNAME,
     "password": process.env.DB_PASSWORD,
-    "database": process.env.DB_NAME,
+    "database": process.env.DATABASE,
     "host": process.env.DB_HOST,
     "dialect": "mysql"
   }

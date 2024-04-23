@@ -14,4 +14,4 @@ const urlRouter = require('./routes/urlRouter');
 app.use(urlRouter);
 
 const _PORT = process.env.PORT || 3000;
-app.listen(_PORT);
+app.listen(_PORT, () => console.log('*** Servidor Corriendo ***'));
