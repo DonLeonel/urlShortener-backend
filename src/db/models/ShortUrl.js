@@ -2,7 +2,7 @@ const shortId = require('shortid');
 
 module.exports = (sequelize, dataTypes) => {
     const cols = {
-        id:{
+        id: {
             type: dataTypes.INTEGER,
             primaryKey: true,
             autoIncrement: true,
@@ -15,12 +15,12 @@ module.exports = (sequelize, dataTypes) => {
         short: {
             type: dataTypes.STRING,
             allowNull: false,
-            defaultValue: shortId.generate 
+            defaultValue: shortId.generate() // Default value, will be overridden by beforeCreate hook           
         },
         clicks: {
             type: dataTypes.INTEGER,
             allowNull: false,
-            defaultValue: 0    
+            defaultValue: 0
         },
         createdAt: {
             type: dataTypes.DATE
@@ -32,10 +32,10 @@ module.exports = (sequelize, dataTypes) => {
 
     const config = {
         tableName: 'shortUrls',
-        timeStamps: true
+        timestamps: true
     }
 
     const ShortUrl = sequelize.define('ShortUrl', cols, config)  
-    
+
     return ShortUrl;
 }

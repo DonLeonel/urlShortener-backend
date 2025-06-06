@@ -2,6 +2,7 @@ const { ShortUrl } = require('../db/models');
 
 module.exports = {
     short: async (req, res) => {
+    
 
         try {
             const shortUrl = await ShortUrl.create({

@@ -11,5 +11,5 @@ Este proyecto es un backend para un servicio de acortamiento de URL. Permite a l
 ## Tecnologías Utilizadas
 - Framework: Express.js
 - ORM: Sequelize
-- Base de Datos: MySQL
+- Base de Datos: Postgres
 - Generación de Short IDs: shortid

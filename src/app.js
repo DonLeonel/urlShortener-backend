@@ -2,6 +2,7 @@ const express = require('express');
 const app = express();
 const cors = require('cors');
 const bodyParser = require('body-parser')
+require('dotenv').config();
 
 app.use(express.urlencoded({ extended: false }));
 app.use(cors());
@@ -14,4 +15,4 @@ const urlRouter = require('./routes/urlRouter');
 app.use(urlRouter);
 
 const _PORT = process.env.PORT || 3000;
-app.listen(_PORT, () => console.log('*** Servidor Corriendo ***'));
+app.listen(_PORT);
